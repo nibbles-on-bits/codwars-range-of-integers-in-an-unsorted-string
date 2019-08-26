@@ -7,11 +7,18 @@ import (
 )
 
 func main() {
-	s := "1568141291110137"
-	fmt.Println(MysteryRange(s, 10))
+	//s := "1568141291110137"
+	//l := 10
 
-	//fmt.Println(MysteryRange("6291211413114538107", 14))
-	fmt.Println(MysteryRange("13161820142119101112917232215", 15))
+	//fmt.Println(MysteryRange(s, 10))
+
+	fmt.Println(MysteryRange("1721532418565922162558663126649136347436733301144143236653738464135820194215516155541239452852623450572927602348104049", 60))
+	//fmt.Println(MysteryRange("13161820142119101112917232215", 15))
+
+	//s = "1721532418565922162558663126649136347436733301144143236653738464135820194215516155541239452852623450572927602348104049"
+	//l = 60
+
+	//fmt.Println(MysteryRange(s, l))
 
 	//r := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 	//r := []int{6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
@@ -63,6 +70,7 @@ func MysteryRange(s string, l int) [2]int {
 		// now we have a built range, we want to see if the string s belongs to that range
 		if belongsToRange(s, r) {
 			fmt.Println("YES!")
+			fmt.Println(r)
 			ret[0] = r[0]
 			ret[1] = r[len(r)-1]
 			return ret
@@ -72,7 +80,7 @@ func MysteryRange(s string, l int) [2]int {
 	return ret
 }
 
-func belongsToRange(s string, r []int) ([2]int, bool) {}
+func belongsToRange(s string, r []int) bool {
 	fmt.Printf("belongsToRange() s=%v r=%v\n", s, r)
 
 	tmp := s

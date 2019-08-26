@@ -26,3 +26,10 @@ Full Test Suite: 21 fixed tests, 100 random tests
 Use Python 3+ for the Python translation
 For JavaScript, require has been disabled and most built-in prototypes have been frozen (prototype methods can be added to Array and Function)
 All test cases will be valid
+
+
+Currently failing on 
+s = "1721532418565922162558663126649136347436733301144143236653738464135820194215516155541239452852623450572927602348104049" 
+l = 60
+
+due to the fact that there are 2x 64's in the string
